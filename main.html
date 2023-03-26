@@ -1,0 +1,32 @@
+<html>
+	<head>
+	<title>ULTIMATE POKEMON TINDER</title>
+	<link rel="stylesheet" href="main.css">
+	</head>
+	<body bgcolor="#0f0f0f" text="#FFFFFF">
+		<div class="center">
+			<button class="button-30" onclick="choice(0)" type="button">KILL</button>
+			<button class="button-30" onclick="choice(1)" type="button">SLAP</button>
+			<button class="button-30" onclick="choice(2)" type="button">PASS</button>
+			<button class="button-30" onclick="choice(3)" type="button">EAT</button>
+		</div>
+		<div class="center">
+			<button class="button-30" onclick="choice(4)" type="button">KISS</button>
+			<button class="button-30" onclick="choice(5)" type="button">DATE</button>
+			<button class="button-30" onclick="choice(6)" type="button">SMASH</button>
+			<button class="button-30" onclick="choice(7)" type="button">MARRY</button>
+		</div>
+		<div class="slider; center">
+			<input id="loveliness" style="min-width: 420px;" type="range" min="0" max="10" value="5" oninput="rangeValue.innerText = 'Loveliness: ' + this.value + '/10'">
+			<b id="rangeValue" class="center" style="font-size: large;">Loveliness: 5/10</b>
+		</div>
+		<img class="center" style="height: 384px; width: auto;" id="image" src="https://sun1-56.userapi.com/impg/vaB5RHVKcbt5QgAOjfJz50snWVvflWsOQ9i81g/tyMFjhmVrrI.jpg?size=583x321&quality=96&sign=90564ad49569397c1a90c16c45ae99b6&type=album">
+		<b style="text-align: center;" class="center" id="pokemonName">name</b>
+		<b style="text-align: center;" class="center" id="height">height</b>
+		<b style="text-align: center;" class="center" id="weight">weight</b>
+		<b style="text-align: center;" class="center" id="type">type</b>
+		<b style="text-align: center;" class="center" id="id">id</b>
+		<button class="button-30" onclick="results()" type="button">RESULTS (check console)</button>
+	</body>
+	<script src="main.js"></script>
+</html>
