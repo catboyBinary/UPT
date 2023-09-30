@@ -1,12 +1,12 @@
 var number = 1
 var string = ""
-const words = ["KILL","SLAP","PASS","EAT","KISS","DATE","SMASH","MARRY"]
+const words = ["KISS","MARRY","KILL"]
 
 function get_pokemon(id, n) {
 	fetch('https://pokeapi.co/api/v2/pokemon/'+id)
 	.then((response) => response.json())
 	.then((data) => {
-		string += data.name + ":" + words[n] + ":" + document.getElementById("loveliness").value + "\n"
+		string += data.name + ":" + words[n] + "\n"
 		number += 1
 		fetch('https://pokeapi.co/api/v2/pokemon/'+number)
 		.then((response) => response.json())
