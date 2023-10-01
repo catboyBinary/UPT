@@ -1,14 +1,16 @@
 var number = 1
 var string = ""
 const words = ["KISS","MARRY","KILL"]
+var pokemons = []
+fetch_pokemons()
 
 function get_pokemon(id, n) {
-	fetch('https://pokeapi.co/api/v2/pokemon/'+id)
+	fetch(pokemons[id-1].url)
 	.then((response) => response.json())
 	.then((data) => {
 		string += data.name + ":" + words[n] + "\n"
-		number += 1
-		fetch('https://pokeapi.co/api/v2/pokemon/'+number)
+		number = Math.floor(Math.random() * pokemons.length)+1
+		fetch(pokemons[number-1].url)
 		.then((response) => response.json())
 		.then((data) => {
 			var types = ""
@@ -32,4 +34,10 @@ function results() {
 function choice(n) {
 	//console.log(number + ": " + words[n])
 	get_pokemon(number, n)
+}
+
+async function fetch_pokemons() {
+	const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
+	const json = await response.json()
+	pokemons = await json.results
 }
